@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://d8xbf51iwou8"]
+
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_lg8ib"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5oggw"]
+font_size = 48
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_lg8ib")
+
+[node name="BtnStart" type="Button" parent="."]
+offset_right = 150.0
+offset_bottom = 40.0
+text = "Começar"
+
+[node name="BtnQuit" type="Button" parent="."]
+offset_top = 189.0
+offset_right = 150.0
+offset_bottom = 229.0
+text = "Sair
+"
+
+[node name="LabelTitle" type="Label" parent="."]
+offset_right = 96.0
+offset_bottom = 23.0
+text = "Ball Escapist"
+label_settings = SubResource("LabelSettings_5oggw")
+
+[connection signal="pressed" from="BtnStart" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="BtnQuit" to="." method="_on_btn_quit_pressed"]
